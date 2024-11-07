@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+#score, #time {
+    margin: 10px;
+}
+
+#menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.menu {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 2px solid #4400ff;
+}
+
+.menu h1, .menu h2 {
+    color: #4400ff;
+    margin-bottom: 30px;
+}
+
+.menu button {
+    background: #4400ff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.menu button:hover {
+    background: #5500ff;
+    transform: scale(1.1);
+}
+
+.instructions {
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.hidden {
+    display: none;
+}
+
+#life, #universe {
+    margin: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#life {
+    color: #ff4444;
+}
+
+#universe {
+    color: #44ff44;
+}
+
+.universe-transition-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

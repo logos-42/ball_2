@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际探索</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-overlay">
+            <div id="score">得分: 0</div>
+            <div id="time">时间: 0</div>
+            <div id="life">寿命: 100</div>
+            <div id="universe">宇宙: 1/3</div>
+        </div>
+        <div id="menu-overlay">
+            <div id="start-menu" class="menu">
+                <h1>星际探索</h1>
+                <button id="start-button">开始游戏</button>
+                <div class="instructions">
+                    <p>↑ 或 W 向前推进</p>
+                    <p>← → 或 A D 旋转方向</p>
+                    <p>收集星球获得分数和寿命</p>
+                    <p>使用虫洞会消耗寿命</p>
+                    <p>你有3个平行宇宙的机会</p>
+                </div>
+            </div>
+            <div id="game-over-menu" class="menu hidden">
+                <h2>游戏结束</h2>
+                <div id="final-score"></div>
+                <button id="restart-button">重新开始</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
